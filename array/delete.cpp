@@ -19,7 +19,7 @@ void display(struct array ar)
 
 void Delete(struct array *ar, int index)
 {
-    for (int i = index; i < ar->length - 1; i++)
+    for (int i = index; i < ar->length; i++)
     {
         ar->a[i] = ar->a[i + 1];
     }
@@ -32,4 +32,5 @@ int main()
     display(arr);
     Delete(&arr , 1);
     display(arr);
+    
 }
