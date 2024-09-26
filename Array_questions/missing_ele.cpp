@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-int missing_ele(int low , int high ,int a[], int n)
+int missing_ele(int a[], int n)
 {
- int diff=low-0;
+ int diff=a[0]-0;
  for(int i=0; i<n ; i++)
  {
     if(a[i]-i != diff)
@@ -26,7 +26,7 @@ int main()
         cin >> a[i];  
     }
     
-    cout<<"Missing element  is : "<< missing_ele(a[0] , a[n-1] ,a, n );
+    cout<<"Missing element  is : "<< missing_ele(a, n );
     
 
 
