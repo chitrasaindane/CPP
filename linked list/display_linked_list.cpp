@@ -8,6 +8,7 @@ struct Node {
 
 Node* head = nullptr ;
 Node* temp;
+
 Node* createNode(int data) {
     Node* newNode = new Node();
     newNode->data = data;
@@ -20,8 +21,11 @@ Node* createNode(int data) {
        
     }
     else{
-     temp -> next = newNode;
-     temp = temp->next;
+     temp=head;
+     while (temp->next != nullptr) {
+            temp = temp->next;   
+        }
+        temp->next = newNode;
     }
 }
 
